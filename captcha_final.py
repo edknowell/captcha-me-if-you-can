@@ -4,6 +4,7 @@ import re
 import subprocess
 import time
 
+#must be logged in to a root-me account
 def captcha_me_if_you_can():
     session = requests.Session()
     url = 'http://challenge01.root-me.org/programmation/ch8/'
@@ -39,4 +40,5 @@ def captcha_me_if_you_can():
     return False
 
 if __name__ == "__main__":
+
     captcha_me_if_you_can()
