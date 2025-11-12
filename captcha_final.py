@@ -23,7 +23,7 @@ def captcha_me_if_you_can():
                 
                 if len(captcha) != 12:
                     continue
-                
+                    
                 result = session.post(url, data={'cametu': captcha}).text
                 if "Congrat" in result:
                     if flag := re.search(r'flag\{[^}]+\}', result):
@@ -40,5 +40,4 @@ def captcha_me_if_you_can():
     return False
 
 if __name__ == "__main__":
-
     captcha_me_if_you_can()
